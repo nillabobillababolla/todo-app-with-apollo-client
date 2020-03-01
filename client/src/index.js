@@ -1,9 +1,9 @@
+import { ApolloProvider } from "@apollo/react-hooks";
+import ApolloClient from "apollo-boost";
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "@apollo/react-hooks";
+import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
 const client = new ApolloClient({

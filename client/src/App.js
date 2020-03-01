@@ -1,7 +1,7 @@
+import { useMutation, useQuery } from "@apollo/react-hooks";
+import gql from "graphql-tag";
 import React from "react";
 import "./App.css";
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import gql from "graphql-tag";
 
 const READ_TODOS = gql`
   query todos {
@@ -51,7 +51,13 @@ function App() {
           input.value = "";
           window.location.reload();
         }}
-      >
+         onReset = {
+           e => {
+             e.preventDefault();
+             clearTodos();
+             window.location.reload();
+           }
+         }>
         <input
           className="form-control"
           type="text"
